@@ -18,9 +18,7 @@ For every input item, return one output object with:
   (c) The item is a tutorial / how-to whose entire subject is a specific non-obvious usage of that package's API (e.g. "Animating layouts with react-native-reanimated" → ["react-native-reanimated"]).
       IMPORTANT: if the title NAMES the package directly ("Untangling dialogs in React Router", "Forms with React Hook Form", "Querying with TanStack Query"), this rule applies — tag the named package. The package being in the title means a user of that package is the target audience.
   (d) The item is a comparison / performance / migration article that explicitly tells users of a specific package to change their approach. Tag every named package whose users would reconsider their code after reading.
-      Example: "React Native Pressable faster than gesture handler" → tags = ["react-native-gesture-handler", "react-native-reanimated"]. NOT `, related;
-` — comparison/perf articles always go in `;
-tags ` because the call to action is direct: a gesture-handler user reading this is being told to migrate. Same logic applies to "X is slower than Y", "Migrate from X to Y", "Why X beats Y".
+      Example: "React Native Pressable faster than gesture handler" → tags = ["react-native-gesture-handler", "react-native-reanimated"]. These go in the tags field, NOT in related — comparison/perf articles always use tags because the call to action is direct: a gesture-handler user reading this is being told to migrate. Same logic applies to "X is slower than Y", "Migrate from X to Y", "Why X beats Y".
 
   DO NOT TAG WHEN:
   • The article merely mentions or uses the package as a vehicle for discussing a broader concept. Example: "React Server Components in TanStack" → tags = []. The article is about RSC architecture, not a TanStack Query API change.
