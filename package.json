@@ -1,5 +1,5 @@
 {
-  "name": "stack-weekly",
+  "name": "@bam.tech/stack-weekly",
   "version": "0.3.0",
   "description": "Weekly digest from This Week In React, filtered against your project's stack",
   "type": "module",
@@ -9,9 +9,7 @@
   },
   "files": [
     "bin",
-    "dist",
-    "src",
-    "tsconfig.json"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
@@ -19,10 +17,32 @@
     "dev": "tsc --watch",
     "start": "node dist/cli.js",
     "prepare": "tsc",
+    "prepublishOnly": "npm run build",
     "update-index": "npm run build:scripts && node dist/scripts/update-index.js"
   },
+  "keywords": [
+    "cli",
+    "react",
+    "react-native",
+    "newsletter",
+    "this-week-in-react",
+    "package-json",
+    "stack",
+    "weekly"
+  ],
   "author": "Eliott Gandiolle",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theodo-group/stack-weekly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theodo-group/stack-weekly/issues"
+  },
+  "homepage": "https://github.com/theodo-group/stack-weekly#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "commander": "^12.1.0",
     "ink": "^6.6.0",

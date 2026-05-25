@@ -20,9 +20,9 @@ A weekly digest of [**This Week In React**](https://thisweekinreact.com/), filte
 From any project root (anywhere with a `package.json`):
 
 ```bash
-bunx github:theodo-group/stack-weekly
+bunx @bam.tech/stack-weekly
 # or
-npx github:theodo-group/stack-weekly
+npx @bam.tech/stack-weekly
 ```
 
 Or pin it as a `package.json` script so you can `npm run news` weekly:
@@ -30,7 +30,7 @@ Or pin it as a `package.json` script so you can `npm run news` weekly:
 ```json
 {
   "scripts": {
-    "news": "npx --yes github:theodo-group/stack-weekly"
+    "news": "npx --yes @bam.tech/stack-weekly"
   }
 }
 ```
@@ -40,7 +40,7 @@ Or run it after every `npm install` as a postinstall hook:
 ```json
 {
   "scripts": {
-    "postinstall": "npx --yes github:theodo-group/stack-weekly || true"
+    "postinstall": "npx --yes @bam.tech/stack-weekly || true"
   }
 }
 ```
