@@ -1,6 +1,6 @@
 {
   "name": "@bam.tech/stack-weekly",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Weekly digest from This Week In React, filtered against your project's stack",
   "type": "module",
   "main": "dist/cli.js",
