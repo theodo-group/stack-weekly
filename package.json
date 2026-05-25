@@ -1,0 +1,36 @@
+{
+  "name": "stack-weekly",
+  "version": "0.3.0",
+  "description": "Weekly digest from This Week In React, filtered against your project's stack",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "stack-weekly": "bin/stack-weekly.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:scripts": "tsc -p tsconfig.scripts.json",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "update-index": "npm run build:scripts && node dist/scripts/update-index.js"
+  },
+  "author": "Eliott Gandiolle",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ink": "^6.6.0",
+    "ink-spinner": "^5.0.0",
+    "node-html-parser": "^7.0.1",
+    "react": "^19.2.3",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.9",
+    "openai": "^4.77.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

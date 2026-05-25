@@ -1,0 +1,47 @@
+name: update-index
+
+on:
+  schedule:
+    # Every Friday at 07:00 UTC (09:00 Paris CEST / 08:00 CET).
+    # The newsletter is published mid-week, so by Friday the latest issue is ready.
+    - cron: '0 7 * * 5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-index
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: parse latest issues
+        run: npm run update-index
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # How many recent issues to (re-)check. Already-indexed files are skipped.
+          STACK_WEEKLY_BACKFILL: '4'
+
+      - name: commit + push if changed
+        run: |
+          if [[ -n "$(git status --porcelain index/)" ]]; then
+            git config user.name "stack-weekly-bot"
+            git config user.email "stack-weekly-bot@users.noreply.github.com"
+            git add index/
+            git commit -m "chore(index): refresh latest issues"
+            git push
+          else
+            echo "no new issues to index"
+          fi
