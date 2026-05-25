@@ -16,6 +16,7 @@ For every input item, return one output object with:
       You MUST tag every 📦 release with the primary package being released. Derive the package ID by lowercasing the product name from the title and hyphen-joining words (e.g. "Rozenite DevTools 1.10 - …" → ["rozenite"]; "View Shot 5.1 - …" → ["react-native-view-shot"] if you know the scoped name, otherwise ["view-shot"]; "Skia Lab - Beautiful react-native-skia demo" → ["@shopify/react-native-skia"] because the demo's subject IS the skia package). When in doubt about scope (@org/name vs name), use the unscoped form.
   (b) The item is a security advisory or breaking-change announcement that REQUIRES users of that package to take action. Example: "Next.js May 2026 security release" → ["next"]; "TanStack npm supply-chain compromise" → ["@tanstack/react-query", "@tanstack/react-router", "@tanstack/start"].
   (c) The item is a tutorial / how-to whose entire subject is a specific non-obvious usage of that package's API (e.g. "Animating layouts with react-native-reanimated" → ["react-native-reanimated"]).
+      IMPORTANT: if the title NAMES the package directly ("Untangling dialogs in React Router", "Forms with React Hook Form", "Querying with TanStack Query"), this rule applies — tag the named package. The package being in the title means a user of that package is the target audience.
   (d) The item is a comparison / performance / migration article that explicitly tells users of a specific package to change their approach. Tag every named package whose users would reconsider their code after reading. Example: "React Native Pressable faster than gesture handler" → ["react-native-gesture-handler", "react-native-reanimated"] (both are central: gesture-handler users learn they have a cheaper option, reanimated users learn its CSS transition API is the recommended path).
 
   DO NOT TAG WHEN:
@@ -32,13 +33,20 @@ For every input item, return one output object with:
   • Articles about Chrome, V8, npm-registry, bun, deno, TC39 → tags = []. These are not npm packages the user installs.
   • NEVER emit "react" or "react-native" as tags or related. They are too universal — every React/RN dev has them and using them as match keys generates pure noise. Drop them entirely; do not substitute. Same for vague catch-alls like "javascript" or "node".
 
-- related: array of npm package IDs this item COMPETES WITH, IS AN ALTERNATIVE TO, or COMPLEMENTS. Use sparingly — this field is for surfacing relevant items even when the user doesn't have the announced package. Examples:
-  • "Redraw - 2D graphics primitives, powered by WebGPU" (new graphics library) → related = ["@shopify/react-native-skia", "react-native-skia", "react-native-reanimated", "three"]. A user of any of those would want to evaluate Redraw.
-  • A new state-management library → related = ["zustand", "jotai", "redux", "@reduxjs/toolkit"].
-  • A new form library → related = ["react-hook-form", "formik"].
-  • A release of an existing package (📦 of jotai 2.20) → related = [] (already covered by tags).
-  • A general news item, security advisory, or article about a single package's API → related = [].
-  Only list a package in related if you genuinely think a user of that package would want to evaluate the announced thing. Do NOT pad. When in doubt, return [].
+- related: array of npm package IDs whose users would want to read this item even though the item is not directly about their package. Use this for:
+  (1) ALTERNATIVES / COMPETITORS / COMPLEMENTS — new libraries that solve the same problem as an existing one.
+      Example: "Redraw - 2D graphics primitives, powered by WebGPU" → related = ["@shopify/react-native-skia", "react-native-skia", "react-native-reanimated", "three"].
+      Example: new state-management library → related = ["zustand", "jotai", "redux", "@reduxjs/toolkit"].
+      Example: new form library → related = ["react-hook-form", "formik"].
+  (2) TOPIC ARTICLES that don't name a specific package but discuss a concept implemented by a known set of packages. List the packages that IMPLEMENT or PROVIDE that concept.
+      Example: "RSC Server Functions Are Not An API Boundary" (architectural article about RSC) → related = ["next", "@tanstack/start", "waku", "remix", "@redwoodjs/core"]. A user of any RSC-capable framework should read this.
+      Example: "Animating Container Bounds" (animation patterns) → related = ["framer-motion", "motion", "react-spring", "react-native-reanimated"]. Animation-library users want this.
+      Example: "Server-side state management" → related = ["@tanstack/react-query", "swr", "@apollo/client"].
+  (3) DO NOT use related when:
+      • the item already has direct tags covering it (a 📦 release of jotai 2.20 → related = []).
+      • the article is generic ecosystem news, opinion, postmortem, or security commentary not tied to a specific topic — related = [].
+      • the item is about a single package's internals (use the tags field instead).
+  Be moderately generous: if a user of one of those packages would say "huh, worth reading" — list it. But do not pad with loosely-related packages.
 
 Return JSON: { "items": TaggedItem[] }. Keep the order of input items. Output exactly one TaggedItem per input item.`;
 export async function parseIssue(raw) {

@@ -74,7 +74,7 @@ For every input item, return one output object with:
   (3) DO NOT use related when:
       • the item already has direct tags covering it (a 📦 release of jotai 2.20 → related = []).
       • the article is generic ecosystem news, opinion, postmortem, or security commentary not tied to a specific topic — related = [].
-      • the item is about a single package's internals (use `tags` instead).
+      • the item is about a single package's internals (use the tags field instead).
   Be moderately generous: if a user of one of those packages would say "huh, worth reading" — list it. But do not pad with loosely-related packages.
 
 Return JSON: { "items": TaggedItem[] }. Keep the order of input items. Output exactly one TaggedItem per input item.`;
