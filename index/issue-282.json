@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 2,
+  "parsedAt": "2026-05-25T12:59:00.545Z",
+  "model": "gpt-4o",
+  "issueNumber": 282,
+  "title": "This Week In React #282: Security, Fate, TanStack, Redux, Jotai, Base UI, Relay, Storybook | Hermes-node, Expo, Rozenite, Harness, VR, Nitro, Skia, Redraw | TC39, Bun, pnpm, npm, Yarn, Node, Webpack",
+  "url": "https://thisweekinreact.com/newsletter/282",
+  "pubDate": "Wed, 20 May 2026 00:00:00 GMT",
+  "intro": "Hi everyone, Seb and Jan here 👋!\nIt looks like security is going to be a hot topic this year! 😅 More packages are being compromised, and blog posts are also covering recent RSC vulnerabilities. Maybe we’re reaching a tipping point, and better security practices will consolidate this year.\nOn the React Native side, Hermes-node is quite exciting, although it’s very early.\nAn exciting TC39 meeting is currently underway, and several proposals have already progressed. Yarn and npm are improving on the security side. Bun and pnpm are being ported to Rust.\nLet's dive in!\nAs always, thanks for suppo",
+  "items": [
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "🦋",
+      "title": "Bluesky",
+      "url": "https://slo.im/last/b",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "✖️",
+      "title": "X / Twitter",
+      "url": "https://slo.im/last/x",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👔",
+      "title": "LinkedIn",
+      "url": "https://slo.im/last/l",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👽",
+      "title": "Reddit",
+      "url": "https://slo.im/last/r",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "⭐",
+      "title": "Mini Shai-Hulud worm keeps digging",
+      "url": "https://www.wiz.io/blog/mini-shai-hulud-teampcp-hits-antv-supply-chain",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "💸",
+      "title": "PlanetScale - Faster apps start with a faster database. Get started with the fastest benchmarked Postgres and MySQL.",
+      "url": "https://pscale.link/rw",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🗓️",
+      "title": "React Norway",
+      "url": "https://reactnorway.com/?utm_medium=social&utm_source=ThisWeekReact",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "React Server Components in TanStack",
+      "url": "https://frontendmasters.com/blog/react-server-components-in-tanstack/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Structural sharing, selectAtom, and why your jotai atoms re-render too much",
+      "url": "https://www.peterp.me/articles/jotai-structural-sharing-vs-selectatom/",
+      "summary": "",
+      "tags": [
+        "jotai"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "The React2Shell Story",
+      "url": "https://lachlan.nz/blog/the-react2shell-story",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "The Flight Protocol Made Your DoS My Problem",
+      "url": "https://saschb2b.com/blog/flight-protocol-dos",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "💸",
+      "title": "Certificates.dev - React Free Weekend is coming. Get unlimited access to mid-level training, incl. coding challenges + trial exam for 48H.",
+      "url": "https://certificates.dev/react/free-weekend?friend=TWIR",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Fate 1.0 - The first full Async React Metaframework",
+      "url": "https://fate.technology/posts/fate-1.0",
+      "summary": "",
+      "tags": [
+        "fate"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "TanStack Router releases - Deferred hydration capabilities, route matching priority",
+      "url": "https://github.com/TanStack/router/releases/tag/release-2026-05-20-1004",
+      "summary": "",
+      "tags": [
+        "@tanstack/react-router"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "TanStack AI releases - useChat() supports streaming structured output",
+      "url": "https://tanstack.com/blog/streaming-structured-output",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Redux 9.3 - connect API deprecated, Trusted Publishing fixed",
+      "url": "https://github.com/reduxjs/react-redux/releases/tag/v9.3.0",
+      "summary": "",
+      "tags": [
+        "@reduxjs/toolkit"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Redux Toolkit 2.12 - TypeScript Improvements, Skills",
+      "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.12.0",
+      "summary": "",
+      "tags": [
+        "@reduxjs/toolkit"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Base UI 1.5 - Major mount perf improvements for popovers/dialogs/tooltips/menus",
+      "url": "https://base-ui.com/react/overview/releases/v1-5-0",
+      "summary": "",
+      "tags": [
+        "base-ui"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Hook Form 7.76 - Improved isDirty and useFieldArray",
+      "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.76.0",
+      "summary": "",
+      "tags": [
+        "react-hook-form"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Relay 21.0 - First-party TypeScript support, experimental RSC support, improved error handling",
+      "url": "https://github.com/facebook/relay/releases/tag/v21.0.0",
+      "summary": "",
+      "tags": [
+        "relay"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Storybook 10.4 - TanStack React, React Native isolation, agentic setup, review filters",
+      "url": "https://storybook.js.org/blog/storybook-10-4/",
+      "summary": "",
+      "tags": [
+        "storybook",
+        "@tanstack/react-query"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Doctor 0.2 - Your agent writes bad React. This catches it.",
+      "url": "https://github.com/millionco/react-doctor",
+      "summary": "",
+      "tags": [
+        "react-doctor"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Router 7.15.1 - New unstable_useRouterState consolidation API",
+      "url": "https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v7151",
+      "summary": "",
+      "tags": [
+        "react-router"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🎙️",
+      "title": "Syntax.fm 1005 - Programatic and Skill based Video Creation with Remotion",
+      "url": "https://syntax.fm/show/1005/programatic-and-skill-based-video-creation-with-remotion",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "PostHog - The 7 best session replay tools for mobile apps",
+      "url": "https://go.posthog.com/twir-may20",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Unlocking Expo Updates in an Isolated Brownfield Architecture with SDK 55",
+      "url": "https://www.callstack.com/blog/unlocking-expo-updates-in-an-isolated-brownfield-architecture-with-sdk-55",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Changes to project loading behavior in Expo Go",
+      "url": "https://expo.dev/changelog/expo-go-loading-changes-may-2026",
+      "summary": "",
+      "tags": [
+        "expo-go"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "WTF does .box() do in Nitro Modules?",
+      "url": "https://www.peterp.me/articles/wtf-does-box-do-in-nitro-modules/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Build fast, no matter what: how Expo is optimizing for speed (and how you can, too)",
+      "url": "https://expo.dev/blog/build-fast-no-matter-what-how-expo-is-optimizing-for-speed",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Using TurboModule Substitution to Build Safer React Native Plugin Systems",
+      "url": "https://www.callstack.com/blog/using-turbomodule-substitution-to-build-safer-react-native-plugin-systems",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Hermes Node - Node.js built-in module compatibility layer for the Hermes JS engine",
+      "url": "https://github.com/tmikov/hermes-node",
+      "summary": "",
+      "tags": [
+        "hermes-node"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Skia Lab - Beautiful react-native-skia demo",
+      "url": "https://github.com/daehyeonmun2021/react-native-skia-lab",
+      "summary": "",
+      "tags": [
+        "@shopify/react-native-skia"
+      ],
+      "related": [
+        "react-native-reanimated",
+        "three"
+      ],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "ViroReact 2.55 - Ship as a native VR experience on Meta Quest",
+      "url": "https://updates.reactvision.xyz/meta-quest-lands-studio-scenes-drop-in-whats-new-in-viroreact-2-55-0-a8876564047a",
+      "summary": "",
+      "tags": [
+        "viroreact"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Harness 1.2 - iOS code coverage, permission automation, external xctest commands",
+      "url": "https://github.com/callstackincubator/react-native-harness/releases/tag/v1.2.0",
+      "summary": "",
+      "tags": [
+        "react-native-harness"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Expo Speech Recognition 56 - Expo SDK 56 support",
+      "url": "https://github.com/jamsch/expo-speech-recognition/releases/tag/v56.0.0",
+      "summary": "",
+      "tags": [
+        "expo-speech-recognition"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "TypeGPU Confetti 0.3 - Rewritten to use TypeGPU",
+      "url": "https://github.com/software-mansion-labs/typegpu-confetti/releases/tag/v0.3.0",
+      "summary": "",
+      "tags": [
+        "typegpu-confetti"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro Fetch 1.3 - Removed box/unbox, fixed binary responses, performance improvements",
+      "url": "https://github.com/margelo/react-native-nitro-fetch/releases/tag/v1.3.0",
+      "summary": "",
+      "tags": [
+        "react-native-nitro-fetch"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Agent Device 0.15 - Faster boot and test replay, iOS replay speedup, MCP discovery-only",
+      "url": "https://github.com/callstackincubator/agent-device/releases/tag/v0.15.0",
+      "summary": "",
+      "tags": [
+        "agent-device"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "View Shot 5.1 - iOS 17 compatibility, Windows support + example, Android ScrollView fix",
+      "url": "https://github.com/gre/react-native-view-shot/releases",
+      "summary": "",
+      "tags": [
+        "react-native-view-shot"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Rozenite DevTools 1.10 - Network, Performance, Vite plugin improvements",
+      "url": "https://github.com/callstackincubator/rozenite/releases/tag/v1.10.0",
+      "summary": "",
+      "tags": [
+        "rozenite"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🎙️",
+      "title": "RNR 353 - Building React Native Apps in the AI Era",
+      "url": "https://infinite.red/react-native-radio/rnr-353-building-react-native-apps-in-the-ai-era",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "👀",
+      "title": "Explicit Resource Management reached TC39 stage 4",
+      "url": "https://github.com/tc39/proposal-explicit-resource-management",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "👀",
+      "title": "npm RFC - Make install scripts opt-in",
+      "url": "https://github.com/npm/rfcs/pull/868",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "👀",
+      "title": "Bun PR - Rewrite Bun in Rust",
+      "url": "https://github.com/oven-sh/bun/pull/30412",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "Declarative partial updates",
+      "url": "https://developer.chrome.com/blog/declarative-partial-updates",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "QUIC and HTTP/3 Come To Node.js (finally)",
+      "url": "https://www.jasnell.me/posts/quic-comes-to-node",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "pnpm 11.12 - Experimental Rust install engine",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.2.0",
+      "summary": "",
+      "tags": [
+        "pnpm"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Yarn 4.15 - Add npmMinimalAgeGate: 1d release cooldown by default",
+      "url": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fcli%2F4.15.0",
+      "summary": "",
+      "tags": [
+        "yarn"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Node 26.2 - stream.compose stable, fs.stat() returns Temporal.Instant",
+      "url": "https://nodejs.org/en/blog/release/v26.2.0",
+      "summary": "",
+      "tags": [
+        "node"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Webpack 5.107 - Experimental HTML modules, experimental native TS support",
+      "url": "https://webpack.js.org/blog/2026-05-19-webpack-5-107/",
+      "summary": "",
+      "tags": [
+        "webpack"
+      ],
+      "related": [],
+      "audience": []
+    }
+  ]
+}
