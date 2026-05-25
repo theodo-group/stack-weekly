@@ -1,10 +1,6 @@
 # stack-weekly
 
-A weekly digest of [**This Week In React**](https://thisweekinreact.com/), filtered against your project's `package.json`. Tells you which items are actually relevant to your stack — releases of packages you use, security advisories that hit your deps, comparison articles that name your libraries, and alternatives to packages you have installed.
-
-## Why
-
-The newsletter is great, but most weeks half the items don't apply to your stack. Reading carefully takes 20 minutes; reading filtered takes 30 seconds.
+A weekly digest of [**This Week In React**](https://thisweekinreact.com/), filtered against your project's `package.json`. Surfaces only items that are actually relevant to your stack.
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -19,107 +15,82 @@ The newsletter is great, but most weeks half the items don't apply to your stack
    ↗ https://wcandillon.github.io/redraw/
 ```
 
-## How it works
-
-1. A **GitHub Action** runs every Friday at 07:00 UTC. It fetches the latest issues from the newsletter's RSS feed, sends each one to GPT-4o **once**, gets back a tagged index (per-item npm package IDs + related/competing libraries), and commits the result under `index/issue-NNN.json` in this repo.
-2. The **CLI** does no LLM work. On each run it reads your `package.json`, fetches the last 2 indexed issues from `raw.githubusercontent.com`, and matches package names locally. Cached in `~/.cache/stack-weekly/`.
-
-This means: parsing happens once per issue, shared across all users. The CLI itself is free and offline-friendly.
-
-## Install
-
-```bash
-git clone git@github.com:theodo-group/stack-weekly.git
-cd stack-weekly
-npm install
-npm run build
-npm link    # makes `stack-weekly` available globally
-```
-
 ## Use
 
-From any project with a `package.json`:
+From any project root (anywhere with a `package.json`):
 
 ```bash
-stack-weekly                  # last 2 weeks
+bunx github:theodo-group/stack-weekly
+# or
+npx github:theodo-group/stack-weekly
+```
+
+Or pin it as a `package.json` script so you can `npm run news` weekly:
+
+```json
+{
+  "scripts": {
+    "news": "npx --yes github:theodo-group/stack-weekly"
+  }
+}
+```
+
+Or run it after every `npm install` as a postinstall hook:
+
+```json
+{
+  "scripts": {
+    "postinstall": "npx --yes github:theodo-group/stack-weekly || true"
+  }
+}
+```
+
+(The `|| true` makes sure a transient fetch failure never breaks `npm install`.)
+
+### Flags
+
+```bash
+stack-weekly                  # last 2 weeks (default)
 stack-weekly --weeks 4        # last 4 weeks
 stack-weekly --issue 282      # specific issue
 stack-weekly --directory ../some-other-project
 ```
 
-### Opting in to extra packages
+### Tracking packages you don't yet have
 
-If you want updates for packages you don't have installed yet (libraries you're evaluating, devtools your team uses but aren't in `package.json`), drop a `.stack-weekly-extras.json` in the project root:
+Drop a `.stack-weekly-extras.json` in your project root listing packages you want to follow (libraries you're evaluating, devtools your team uses but aren't in `package.json` yet):
 
 ```json
 ["rozenite", "@shopify/react-native-skia"]
 ```
 
-These show up with `☆` (extras match) instead of `★` (direct dependency match).
+They show up with `☆` instead of `★`.
 
 ## Match glyphs
 
 | Glyph | Meaning |
 | ----- | ------- |
-| `★ pkg` | Item tags a package in your `package.json` (direct hit) |
-| `☆ pkg` | Item tags a package in your `.stack-weekly-extras.json` |
+| `★ pkg` | Direct dependency match |
+| `☆ pkg` | Match from your `.stack-weekly-extras.json` |
 | `◇ pkg` | Item is an alternative/competitor/complement to a package you have (only fires when no direct hit exists) |
-| `⭐` (item emoji) | The featured "headline" item of a section in the newsletter |
-
-## Index update workflow
-
-The Friday cron lives in `.github/workflows/update-index.yml`. To trigger it manually:
-
-```bash
-gh workflow run update-index -R theodo-group/stack-weekly
-```
-
-To re-parse an issue (e.g. after tweaking the GPT prompt in `src/lib/parser.ts`):
-
-```bash
-# delete the stale file, then trigger the workflow
-gh api -X DELETE /repos/theodo-group/stack-weekly/contents/index/issue-NNN.json -f message='...'
-gh workflow run update-index -R theodo-group/stack-weekly
-```
-
-Required repo secret: `OPENAI_API_KEY`.
+| `⭐` (item) | Featured "headline" item of a section in the newsletter |
 
 ## Tuning matches
 
-If a match looks wrong, the fix is almost always in the GPT system prompt at `src/lib/parser.ts`. The prompt enforces a hard rule: **tag a package only if reading the item would make a user of that package update their repo or reconsider their code**. Specifically:
+If a match looks wrong, fix the GPT system prompt at `src/lib/parser.ts`, delete the affected `index/issue-NNN.json`, then re-run the workflow:
 
-- 📦 release of a package → tag that package
-- Security advisory or breaking change → tag affected packages
-- Tutorial/how-to focused on a package's API → tag that package
-- Comparison/migration/perf article naming a package → tag that package
-- Articles that merely mention a package → no tag
-- News about ecosystems (TC39, npm, bun, Chrome) → no tag
-- The bare strings `"react"` and `"react-native"` are never tagged — they'd match for every RN user
-
-After editing the prompt, delete the affected `index/issue-NNN.json` files and re-run the workflow.
-
-## Project layout
-
+```bash
+gh workflow run update-index -R theodo-group/stack-weekly
 ```
-src/
-  cli.tsx                     Commander entry point
-  commands/showCmd.tsx        Ink UI orchestration: fetch → match → render
-  components/Report.tsx       Ink renderer (flat list, no chrome)
-  lib/
-    newsletter.ts             RSS + HTML parsing (with featured-item capture)
-    parser.ts                 GPT prompt + invocation (CI-only)
-    cache.ts                  ~/.cache/stack-weekly local cache
-    index-fetcher.ts          Fetch from raw.githubusercontent + cache
-    watchlist.ts              Reads package.json + .stack-weekly-extras.json
-    matcher.ts                Pure-local package matching
-    env.ts                    OPENAI_API_KEY resolution (script path only)
-scripts/
-  update-index.ts             CI script: parse missing issues, write index/
-index/
-  issue-NNN.json              Committed parsed issues
-.github/workflows/
-  update-index.yml            Friday 07:00 UTC cron
-```
+
+The prompt's core rule: **tag a package only if reading the item would make a user of that package update their repo or reconsider their code**. Bare `"react"` and `"react-native"` are never tagged (too universal).
+
+## How it works
+
+1. A **GitHub Action** runs every Friday 07:00 UTC. It fetches the latest issues from the newsletter's RSS feed, sends each one to GPT-4o **once**, and commits the result as `index/issue-NNN.json` to this repo.
+2. The **CLI** does no LLM work. On each run it reads your `package.json`, fetches the last 2 indexed issues from `raw.githubusercontent.com`, and matches package names locally. Cached in `~/.cache/stack-weekly/`.
+
+So GPT parsing happens once per issue and is shared across all users. The CLI itself is free, fast, and offline-friendly after the first fetch.
 
 ## License
 
