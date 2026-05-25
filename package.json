@@ -7,11 +7,18 @@
   "bin": {
     "stack-weekly": "bin/stack-weekly.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "src",
+    "tsconfig.json"
+  ],
   "scripts": {
     "build": "tsc",
     "build:scripts": "tsc -p tsconfig.scripts.json",
     "dev": "tsc --watch",
     "start": "node dist/cli.js",
+    "prepare": "tsc",
     "update-index": "npm run build:scripts && node dist/scripts/update-index.js"
   },
   "author": "Eliott Gandiolle",
