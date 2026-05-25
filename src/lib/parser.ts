@@ -63,6 +63,19 @@ For every input item, return one output object with:
   • Articles about Chrome, V8, npm-registry, bun, deno, TC39 → tags = []. These are not npm packages the user installs.
   • NEVER emit "react" or "react-native" as tags or related. They are too universal — every React/RN dev has them and using them as match keys generates pure noise. Drop them entirely; do not substitute. Same for vague catch-alls like "javascript" or "node".
 
+  CANONICAL PACKAGE IDS — when the item is about one of these popular packages, you MUST use the EXACT npm ID below. Do not invent variants ("expo-sdk", "tanstack-query", "reanimated-3", "skia"). If the title says "Expo SDK 56" the package is "expo", not "expo-sdk". If the title says "Reanimated 4" the package is "react-native-reanimated", not "reanimated". If the title says "Skia" the package is "@shopify/react-native-skia". Match by the package's product name in the title, then use the canonical ID:
+    expo, expo-router, expo-image, expo-camera, expo-notifications, expo-updates, expo-dev-client, expo-av, expo-file-system,
+    react-native, react-native-reanimated, react-native-gesture-handler, react-native-screens, react-native-safe-area-context, react-native-svg, react-native-view-shot, react-native-mmkv, react-native-vision-camera, react-native-paper,
+    nativewind, lottie-react-native, @shopify/react-native-skia, @shopify/flash-list, @gorhom/bottom-sheet,
+    @react-navigation/native, @react-navigation/stack, @react-navigation/bottom-tabs,
+    next, @remix-run/react, waku, vite, @tanstack/start, react-router,
+    @tanstack/react-query, @tanstack/react-router, swr, @apollo/client,
+    zustand, jotai, redux, @reduxjs/toolkit,
+    react-hook-form, zod, valibot,
+    framer-motion, motion, react-spring,
+    storybook, turbo, vitest, detox, maestro, @testing-library/react-native.
+  Exception: "expo-go" is a project-specific tag for Expo Go releases (it is NOT a real npm package) — keep using "expo-go" per the rule above, not "expo".
+
 - related: array of npm package IDs whose users would want to read this item even though the item is not directly about their package. Use this for:
   (1) ALTERNATIVES / COMPETITORS / COMPLEMENTS — new libraries that solve the same problem as an existing one.
       Example: "Redraw - 2D graphics primitives, powered by WebGPU" → related = ["@shopify/react-native-skia", "react-native-skia", "react-native-reanimated", "three"].
