@@ -77,14 +77,24 @@ For every input item, return one output object with:
   Exception: "expo-go" is a project-specific tag for Expo Go releases (it is NOT a real npm package) — keep using "expo-go" per the rule above, not "expo".
 
 - related: array of npm package IDs whose users would want to read this item even though the item is not directly about their package. Use this for:
-  (1) ALTERNATIVES / COMPETITORS / COMPLEMENTS — new libraries that solve the same problem as an existing one.
-      Example: "Redraw - 2D graphics primitives, powered by WebGPU" → related = ["@shopify/react-native-skia", "react-native-skia", "react-native-reanimated", "three"].
-      Example: new state-management library → related = ["zustand", "jotai", "redux", "@reduxjs/toolkit"].
-      Example: new form library → related = ["react-hook-form", "formik"].
-  (2) TOPIC ARTICLES that don't name a specific package but discuss a concept implemented by a known set of packages. List the packages that IMPLEMENT or PROVIDE that concept.
-      Example: "RSC Server Functions Are Not An API Boundary" (architectural article about RSC) → related = ["next", "@tanstack/start", "waku", "remix", "@redwoodjs/core"]. A user of any RSC-capable framework should read this.
-      Example: "Animating Container Bounds" (animation patterns) → related = ["framer-motion", "motion", "react-spring", "react-native-reanimated"]. Animation-library users want this.
-      Example: "Server-side state management" → related = ["@tanstack/react-query", "swr", "@apollo/client"].
+
+  PLATFORM BOUNDARY (CRITICAL — apply BEFORE the rules below): every item belongs to a platform — web (React/DOM/CSS/Canvas/WebGPU-in-browser) or native (React Native / Expo). Use the input's \`section\` field as the primary signal ("React-Native" → native; "React"/"Web"/"Other" → typically web). Confirm with title/URL/text: DOM APIs, CSS, ResizeObserver, container queries, HTML, <canvas>, WebGPU/WebGL-in-browser, framer-motion, three.js → web; native modules, Hermes, JSI, Fabric, TurboModules, Skia native, Reanimated worklets, gesture-handler → native.
+    • A WEB article MUST NOT list react-native-* / @shopify/react-native-* / expo-* / @gorhom/* / @react-navigation/* / nativewind / lottie-react-native / detox / maestro / @testing-library/react-native in related. RN developers cannot use DOM/CSS/browser APIs — putting RN libs there is pure noise.
+    • A REACT NATIVE article MUST NOT list framer-motion / motion / react-spring / next / vite / @remix-run/react / waku / react-router / @tanstack/react-router / @tanstack/start / three / web-only packages in related.
+    • react-native-reanimated and react-native-gesture-handler are NATIVE-ONLY. Never put them in related for a web article, even if the topic is "animation" or "gestures".
+    • Cross-platform packages (zod, valibot, @tanstack/react-query, swr, @apollo/client, redux, @reduxjs/toolkit, zustand, jotai, react-hook-form, storybook) can appear on either side.
+
+  (1) ALTERNATIVES / COMPETITORS / COMPLEMENTS — new libraries that solve the same problem as an existing one (on the SAME platform).
+      Example: "Redraw - 2D graphics primitives, powered by WebGPU" (web — WebGPU is a browser API) → related = ["three"]. Do NOT include @shopify/react-native-skia or react-native-reanimated — those are native libs and RN devs can't use a WebGPU browser library.
+      Example: "Skia Lab - Beautiful react-native-skia demo" (native) → related = ["react-native-reanimated"]. Do NOT include three or framer-motion.
+      Example: new state-management library → related = ["zustand", "jotai", "redux", "@reduxjs/toolkit"] (cross-platform OK).
+      Example: new web form library → related = ["react-hook-form", "formik"].
+  (2) TOPIC ARTICLES that don't name a specific package but discuss a concept implemented by a known set of packages. List the packages that IMPLEMENT or PROVIDE that concept ON THE SAME PLATFORM.
+      Example: "RSC Server Functions Are Not An API Boundary" (web architecture) → related = ["next", "@tanstack/start", "waku", "@remix-run/react"]. A user of any RSC-capable framework should read this. No RN libs.
+      Example: "Animating Container Bounds" (web — container queries are a DOM/CSS concept) → related = ["framer-motion", "motion", "react-spring"]. DO NOT include react-native-reanimated — container queries do not exist in React Native.
+      Example: "Exploring the HTML-in-Canvas Proposal" (web — HTML/Canvas are browser-only) → related = []. No native libs. No web animation libs either unless the article is actually about animation.
+      Example: "Layout animations in Reanimated 4" (native) → related = ["react-native-gesture-handler"]. No framer-motion.
+      Example: "Server-side state management" → related = ["@tanstack/react-query", "swr", "@apollo/client"] (cross-platform OK).
   (3) DO NOT use related when:
       • the item already has direct tags covering it (a 📦 release of jotai 2.20 → related = []).
       • the article is generic ecosystem news, opinion, postmortem, or security commentary not tied to a specific topic — related = [].
