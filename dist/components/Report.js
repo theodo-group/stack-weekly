@@ -1,5 +1,8 @@
 import React from 'react';
 import { Box, Text, useStdout } from 'ink';
+function weekLabel(n) {
+    return n === 1 ? '1 week' : `${n} weeks`;
+}
 function useTermWidth() {
     const { stdout } = useStdout();
     const cols = stdout?.columns;
@@ -15,14 +18,26 @@ function isoDate(s) {
         return '';
     return d.toISOString().slice(0, 10);
 }
-export const Report = ({ issues, result }) => {
+export const Report = ({ issues, result, ctx }) => {
     const width = useTermWidth();
     const rule = '━'.repeat(width);
     const flat = result.groups.flatMap((g) => g.items);
     return (React.createElement(Box, { flexDirection: "column" },
         React.createElement(Header, { issues: issues, rule: rule }),
+        React.createElement(Box, { marginTop: 1, flexDirection: "column" },
+            React.createElement(Text, { color: "gray" },
+                "Scanning the last ",
+                weekLabel(issues.length),
+                " of",
+                ' ',
+                React.createElement(Text, { bold: true, color: "white" }, "This Week In React"),
+                " for items relevant to",
+                ' ',
+                React.createElement(Text, { color: "green" }, ctx.repoName),
+                React.createElement(Text, { color: "gray" }, ` — ${result.totalMatched} match${result.totalMatched === 1 ? '' : 'es'} out of ${result.totalScanned} item${result.totalScanned === 1 ? '' : 's'}.`))),
         flat.length === 0 ? (React.createElement(Box, { marginTop: 1 },
-            React.createElement(Text, { color: "yellow" }, "\u2205 nothing matches your stack."))) : (React.createElement(Box, { flexDirection: "column", marginTop: 1 }, flat.map((m, i) => (React.createElement(Item, { key: i, matched: m })))))));
+            React.createElement(Text, { color: "yellow" }, "\u2205 nothing matches your stack."))) : (React.createElement(Box, { flexDirection: "column", marginTop: 1 }, flat.map((m, i) => (React.createElement(Box, { key: i, flexDirection: "column", marginBottom: 1 },
+            React.createElement(Item, { matched: m }))))))));
 };
 const Header = ({ issues, rule }) => {
     const newest = issues[0];

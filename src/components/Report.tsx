@@ -10,6 +10,10 @@ interface Props {
   ctx: StackContext;
 }
 
+function weekLabel(n: number): string {
+  return n === 1 ? '1 week' : `${n} weeks`;
+}
+
 function useTermWidth(): number {
   const { stdout } = useStdout();
   const cols = stdout?.columns;
@@ -24,7 +28,7 @@ function isoDate(s: string): string {
   return d.toISOString().slice(0, 10);
 }
 
-export const Report: React.FC<Props> = ({ issues, result }) => {
+export const Report: React.FC<Props> = ({ issues, result, ctx }) => {
   const width = useTermWidth();
   const rule = '━'.repeat(width);
   const flat = result.groups.flatMap((g) => g.items);
@@ -32,6 +36,14 @@ export const Report: React.FC<Props> = ({ issues, result }) => {
   return (
     <Box flexDirection="column">
       <Header issues={issues} rule={rule} />
+      <Box marginTop={1} flexDirection="column">
+        <Text color="gray">
+          Scanning the last {weekLabel(issues.length)} of{' '}
+          <Text bold color="white">This Week In React</Text> for items relevant to{' '}
+          <Text color="green">{ctx.repoName}</Text>
+          <Text color="gray">{` — ${result.totalMatched} match${result.totalMatched === 1 ? '' : 'es'} out of ${result.totalScanned} item${result.totalScanned === 1 ? '' : 's'}.`}</Text>
+        </Text>
+      </Box>
       {flat.length === 0 ? (
         <Box marginTop={1}>
           <Text color="yellow">∅ nothing matches your stack.</Text>
@@ -39,7 +51,9 @@ export const Report: React.FC<Props> = ({ issues, result }) => {
       ) : (
         <Box flexDirection="column" marginTop={1}>
           {flat.map((m, i) => (
-            <Item key={i} matched={m} />
+            <Box key={i} flexDirection="column" marginBottom={1}>
+              <Item matched={m} />
+            </Box>
           ))}
         </Box>
       )}
