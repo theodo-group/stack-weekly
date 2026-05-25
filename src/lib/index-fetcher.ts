@@ -10,7 +10,9 @@ export async function fetchTaggedIssue(issueNumber: number): Promise<TaggedIssue
   if (cached) return cached;
 
   const url = `${INDEX_BASE_URL}/issue-${issueNumber}.json`;
-  const res = await fetch(url);
+  // Accept-Encoding: identity bypasses GitHub raw's per-encoding cache pool —
+  // the gzipped variant can lag the identity one by several minutes after a push.
+  const res = await fetch(url, { headers: { 'Accept-Encoding': 'identity' } });
   if (res.status === 404) return null;
   if (!res.ok) {
     throw new Error(`failed to fetch ${url}: ${res.status} ${res.statusText}`);
