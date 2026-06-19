@@ -1,0 +1,817 @@
+{
+  "schemaVersion": 2,
+  "parsedAt": "2026-06-19T08:50:03.786Z",
+  "model": "gpt-4o",
+  "issueNumber": 286,
+  "title": "This Week In React #286: React Compiler, StyleX, TSRX, WordPress, TanStack, Remotion, Hydrogen | RN 0.86, Enriched, Gesture Handler, Crypto, Morph View, Compressor, Data Detector, Hermes | Package Maps, Babel, Biome, Zod Compiler, pnpm, Playwright",
+  "url": "https://thisweekinreact.com/newsletter/286",
+  "pubDate": "Wed, 17 Jun 2026 00:00:00 GMT",
+  "intro": "Hi everyone, Seb and Jan here 👋!\nThis week, the React Compiler in Rust is rolling out, and early adopters have already reported significant speedups.\nReact Native 0.86 finally came out with edge-to-edge fixes in core. It’s retro-compatible, and Expo SDK 56 should be able to upgrade.\nLet's dive in!\nAs always, thanks for supporting us on your favorite platform:",
+  "items": [
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "🦋",
+      "title": "Bluesky",
+      "url": "https://slo.im/last/b",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "✖️",
+      "title": "X / Twitter",
+      "url": "https://slo.im/last/x",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👔",
+      "title": "LinkedIn",
+      "url": "https://slo.im/last/l",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👽",
+      "title": "Reddit",
+      "url": "https://slo.im/last/r",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Oxlint 1.70 - Add a react/react-compiler rule",
+      "url": "https://oxc.rs/docs/guide/usage/linter/rules/react/react-compiler.html",
+      "summary": "",
+      "tags": [
+        "oxlint"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "Rolldown PR - Expose React Compiler options",
+      "url": "https://github.com/rolldown/rolldown/pull/9801",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "SWC PR - Add React Compiler",
+      "url": "https://github.com/swc-project/swc/pull/11917",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "Rspack PR - Bump SWC to support the React Compiler",
+      "url": "https://github.com/web-infra-dev/rspack/pull/14435",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "Next.js PR - Add experimental Turbopack React Compiler support",
+      "url": "https://github.com/vercel/next.js/pull/94573",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "💸",
+      "title": "Product for Engineers - The stuff nobody tells you about startup marketing",
+      "url": "https://go.posthog.com/twir-jun17",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "HTML proposal - Localized time formatting without JavaScript",
+      "url": "https://github.com/whatwg/html/issues/12591",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "WordPress - React 19 upgrade temporarily reverted in Gutenberg",
+      "url": "https://make.wordpress.org/core/2026/06/05/react-19-upgrade-temporarily-reverted-in-gutenberg/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Rethinking TSRX",
+      "url": "https://tsrx.dev/blog/rethinking-tsrx",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "TanStack Start: A Mental Model for Next.js Developers",
+      "url": "https://www.adarsha.dev/blog/tanstack-mental-model-for-nextjs-developers",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "next",
+        "@tanstack/start"
+      ],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Module System Dependency Injection in React & Friends",
+      "url": "https://www.jayfreestone.com/writing/module-level-dependency-injection-react/",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "next",
+        "@remix-run/react"
+      ],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Building an LLM safe design system",
+      "url": "https://polar.sh/blog/orbit-llm-safe-design-system",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "💸",
+      "title": "Certificates.dev: Free React Weekend. Unlimited access to 9 chapters, 49 quiz questions, 13 coding challenges, and a trial exam. 27-28 June",
+      "url": "https://certificates.dev/react/free-weekend?utm_source=twir&utm_medium=newsletter&utm_campaign=react_free_weekend_june_2026&friend=TWIR",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Hydrogen developer preview",
+      "url": "https://hydrogen.shopify.dev/update/hydrogen-developer-preview",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "StyleX 0.19 - @stylexjs/atoms for Tailwind-like inline atomic styles, ESLint 10 compatibility",
+      "url": "https://github.com/facebook/stylex/blob/main/CHANGELOG.md#0190-jun-14-2026",
+      "summary": "",
+      "tags": [
+        "stylex"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Doctor GitHub Action",
+      "url": "https://www.react.doctor/docs/ci-and-prs/github-actions-setup",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Visx 4.0 - Low-level visualization components from Airbnb - Support for React 19",
+      "url": "https://github.com/airbnb/visx/releases/tag/v4.0.0",
+      "summary": "",
+      "tags": [
+        "visx"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Remotion 4.0.475 - Interactively change your code with Remotion Studio",
+      "url": "https://github.com/remotion-dev/remotion/releases/v4.0.475",
+      "summary": "",
+      "tags": [
+        "remotion"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Rsbuild Plugin React Router 0.2 - Support for Rsbuild/Rspack v2",
+      "url": "https://github.com/rstackjs/rsbuild-plugin-react-router/releases/tag/rsbuild-plugin-react-router%400.2.0",
+      "summary": "",
+      "tags": [
+        "react-router"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Ink 7.1 - CLI renderer - Add suspendTerminal() to hand the terminal to a child process",
+      "url": "https://github.com/vadimdemedes/ink",
+      "summary": "",
+      "tags": [
+        "ink"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "TanStack AI Beta - The Switzerland of AI Tooling Grows Up",
+      "url": "https://tanstack.com/blog/tanstack-ai-beta",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "⭐",
+      "title": "React Native 0.86",
+      "url": "https://reactnative.dev/blog/2026/06/11/react-native-0.86",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "",
+      "title": "/react GitHub org",
+      "url": "https://github.com/react",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🐦",
+      "title": "The RN repository transition resulted in forks being locked",
+      "url": "https://x.com/cortinico/status/2067181532138152308",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🐦",
+      "title": "Expo SDK 56 will soon be updated to RN 0.86",
+      "url": "https://x.com/zoontek/status/2066490044605436337",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🐦",
+      "title": "With RN 0.86, you don’t need react-native-edge-to-edge anymore",
+      "url": "https://x.com/zoontek/status/2066466699985989874",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "Maestro - Write React Native UI tests with Cursor or Claude Code, see them run live in Maestro Viewer.",
+      "url": "https://docs.maestro.dev/get-started/maestro-mcp?utm_source=this-week-in-react&utm_medium=newsletter&utm_campaign=mcp-viewer-jun17",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🗓️",
+      "title": "Chain React",
+      "url": "https://ti.to/chainreact/chainreact2026/discount/TWIR",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Four Years of React Native Quick Crypto: From Wallets to Node Parity",
+      "url": "https://blog.margelo.com/four-years-of-react-native-quick-crypto",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "React Native, Hermes bytecode, and the Kindle homepage",
+      "url": "https://sighery.com/posts/patching-kindle-homepage/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Faster iOS Builds with Precompiled XCFrameworks",
+      "url": "https://expo.dev/blog/faster-ios-builds-with-precompiled-xcframeworks",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "expo"
+      ],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "How We Improved the Startup Time of Our App by 50%",
+      "url": "https://medium.com/@pumpdotfun_/how-we-improved-the-startup-time-of-our-app-by-50-b3107bed1bf9",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "MoQKit: A Native Mobile SDK for MoQ on iOS and Android",
+      "url": "https://swmansion.com/blog/moqkit-native-mobile-sdk-moq-ios-android/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "EAS Observe: Performance monitoring for Expo apps",
+      "url": "https://expo.dev/blog/introducing-observe",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "expo"
+      ],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Native got easy. I'm still betting on React Native.",
+      "url": "https://codewithbeto.dev/blog/still-betting-on-react-native",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "AI-Assisted React Native Migration for TV: Lessons From Zattoo",
+      "url": "https://www.callstack.com/blog/ai-assisted-react-native-migration-for-tv-lessons-from-zattoo",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "How a Kotlin compiler plugin cut Android time to first render by 30%",
+      "url": "https://expo.dev/blog/how-a-kotlin-compiler-plugin-cut-android-time-to-first-render",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "expo"
+      ],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "App.js Conf 2026 Recap - Gesture Handler 3.0, TypeGPU CLI, Screens 5.0, and More",
+      "url": "https://swmansion.com/blog/app-js-conf-2026-recap-gesture-handler-3-0-type-gpu-cli-screens-5-0-and-more/",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "react-native-gesture-handler",
+        "react-native-screens"
+      ],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Morph View - Morph one image into another with a smooth gooey effect, on the GPU",
+      "url": "https://github.com/blazejkustra/react-native-morph-view",
+      "summary": "",
+      "tags": [
+        "react-native-morph-view"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Uniwind 1.9 - Layout direction component, RTL support",
+      "url": "https://github.com/uni-stack/uniwind/releases/tag/v1.9.0",
+      "summary": "",
+      "tags": [
+        "uniwind"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Sentry 8.14 - Deep link correlation, Android profiling improvements, Expo Router instrumentation",
+      "url": "https://github.com/getsentry/sentry-react-native/releases/tag/8.14.0",
+      "summary": "",
+      "tags": [
+        "sentry-react-native"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Gesture Handler 2.32 - React Native 0.86 support, fix RNRenderer import",
+      "url": "https://github.com/software-mansion/react-native-gesture-handler/releases/tag/v2.32.0",
+      "summary": "",
+      "tags": [
+        "react-native-gesture-handler"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro HealthKit - Single TypeScript API over Apple HealthKit and Android Health Connect",
+      "url": "https://github.com/N0ku/react-native-nitro-healthkit",
+      "summary": "",
+      "tags": [
+        "react-native-nitro-healthkit"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro Markdown 0.8 - Custom renderMarkdown for MarkdownStream, TypeScript improvements, iOS crash fixes",
+      "url": "https://github.com/JoaoPauloCMarra/react-native-nitro-markdown/releases/tag/v0.8.0",
+      "summary": "",
+      "tags": [
+        "react-native-nitro-markdown"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Compressor 2.0 - Nitro Modules migration, min RN 0.75+",
+      "url": "https://github.com/numandev1/react-native-compressor/releases/tag/v2.0.0",
+      "summary": "",
+      "tags": [
+        "react-native-compressor"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Data Detector - Cross-platform text data detection of phone numbers, URLs, emails, dates, and addresses",
+      "url": "https://github.com/pablogdcr/react-native-data-detector",
+      "summary": "",
+      "tags": [
+        "react-native-data-detector"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Enriched HTML 1.0 - Stable release, renamed from react-native-enriched to react-native-enriched-html",
+      "url": "https://github.com/software-mansion/react-native-enriched-html/releases/tag/v1.0.0",
+      "summary": "",
+      "tags": [
+        "react-native-enriched-html"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "CRNL 0.63 / Builder Bob 0.43 - use a unique name for the exports condition for source, metro-config dropped",
+      "url": "https://github.com/callstack/react-native-builder-bob/releases/tag/create-react-native-library%400.63.0",
+      "summary": "",
+      "tags": [
+        "create-react-native-library",
+        "react-native-builder-bob"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Legend List 3.0.6 - clearCaches rechecks visible rows, scroll perf, KeyboardAware insets",
+      "url": "https://github.com/LegendApp/legend-list/releases/tag/v3.0.6",
+      "summary": "",
+      "tags": [
+        "legend-list"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Permissions 5.6 - openContactPicker for iOS 18+ limited contacts",
+      "url": "https://github.com/zoontek/react-native-permissions/releases/tag/5.6.0",
+      "summary": "",
+      "tags": [
+        "react-native-permissions"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Agent Device 0.17.6 - Rslib perf, external xctest runner, Maestro reporter improvements",
+      "url": "https://github.com/callstack/agent-device/releases/tag/v0.17.6",
+      "summary": "",
+      "tags": [
+        "agent-device"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🎙️",
+      "title": "React Native Radio 365 - Chain React 2026 behind the scenes, AI trends",
+      "url": "https://infinite.red/react-native-radio/rnr-365-chain-react-2026",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "👀",
+      "title": "Node.js PR - Experimental support for package maps",
+      "url": "https://github.com/nodejs/node/pull/62239",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "Dark mode with web standards",
+      "url": "https://olliewilliams.xyz/blog/dark-mode/",
+      "summary": "",
+      "tags": [],
+      "related": [
+        "framer-motion",
+        "motion",
+        "react-spring"
+      ],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "We put Bun's Rust rewrite in production on Prisma Compute",
+      "url": "https://www.prisma.io/blog/bun-rust-rewrite-prisma-compute",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "TypeScript Performance in TanStack Table V9",
+      "url": "https://tanstack.com/blog/tanstack-table-v9-typescript-performance",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Prop For That - JS library that backfills what CSS doesn't provide, yet",
+      "url": "https://nerdy.dev/prop-for-that",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Babel 8.0 - ESM-only, drop ES5 default, and a smooth migration path",
+      "url": "https://babeljs.io/blog/2026/06/16/8.0.0/",
+      "summary": "",
+      "tags": [
+        "babel"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Biome 2.5 - 500 Lint Rules, Plugin Code Fix, and Cross-File Linting",
+      "url": "https://biomejs.dev/blog/biome-v2-5/",
+      "summary": "",
+      "tags": [
+        "biome"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "npm 11.17 - add min-release-age-exclude config",
+      "url": "https://github.com/npm/cli/releases/tag/v11.17.0",
+      "summary": "",
+      "tags": [
+        "npm"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "pnpm 11.7 - Full resolution in Rust, --frozen-store, scope-specific auth tokens",
+      "url": "https://pnpm.io/blog/releases/11.7",
+      "summary": "",
+      "tags": [
+        "pnpm"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Zod Compiler - Compile Zod schemas into zero-overhead validation functions at build time",
+      "url": "https://github.com/gajus/zod-compiler",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Playwright 1.61 - WebAuthn passkeys API, Web Storage API",
+      "url": "http://github.com/microsoft/playwright/releases/tag/v1.61.0",
+      "summary": "",
+      "tags": [
+        "playwright"
+      ],
+      "related": [],
+      "audience": []
+    }
+  ]
+}
