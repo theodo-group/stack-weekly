@@ -1,0 +1,679 @@
+{
+  "schemaVersion": 2,
+  "parsedAt": "2026-07-31T09:45:06.623Z",
+  "model": "gpt-4o",
+  "issueNumber": 292,
+  "title": "This Week In React #292: Octane, TanStack, StableRef, Next.js, Canvas UI, Reassure, CSS-in-JS | Workers, SafeAreaView, backgroundImage, WebGPU, VisionCamera, React Navigation, Canvas Kit, Nitro | TC39, Web Vitals, Playwright, Webpack, npm",
+  "url": "https://thisweekinreact.com/newsletter/292",
+  "pubDate": "Wed, 29 Jul 2026 00:00:00 GMT",
+  "intro": "Hi everyone, Seb and Jan here 👋!\nThis week we have an interesting React challenger, keeping its mental model but compiled ahead of time. Also various major announcements from the TanStack side.\nOn the mobile side, we have interesting RN 0.87 PRs to look at, discussions around workers / worklets, a WebGPU/Skia integration, and React Navigation 8 / Screens 5 progress.\nLast week, many proposals progressed during a TC39 meeting. npm is going to scan for malware at publish time. Core Web Vitals will now measure SPA soft navigation.\nLet's dive in!\nAs always, thanks for supporting us on your favorit",
+  "items": [
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "🦋",
+      "title": "Bluesky",
+      "url": "https://slo.im/last/b",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "✖️",
+      "title": "X / Twitter",
+      "url": "https://slo.im/last/x",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👔",
+      "title": "LinkedIn",
+      "url": "https://slo.im/last/l",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👽",
+      "title": "Reddit",
+      "url": "https://slo.im/last/r",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "⭐",
+      "title": "Octane – React's programming model, compiled",
+      "url": "https://octanejs.dev/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "💸",
+      "title": "Sentry - Stop logging everything. Learn what's worth capturing and how to structure it properly.",
+      "url": "https://blog.sentry.io/logging-best-practices/?utm_source=thisweekinreact&utm_medium=paid-community&utm_campaign=logs-fy27q2-evergreen&utm_content=newsletter-react-link-logging-blog-learnmore",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "Next.js docs preview - Offline support",
+      "url": "https://preview.nextjs.org/docs/app/guides/offline-support",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🗓️",
+      "title": "React Advanced London",
+      "url": "https://reactadvanced.com/?utm_source=thisweekinreact",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "TanStack - We Stopped Using RSC on",
+      "url": "https://tanstack.com/blog/we-stopped-using-rsc-on-tanstack-com",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Making Referential Stability a Type",
+      "url": "https://www.jovidecroock.com/blog/referential-stability-types/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Experimenting with RSCs for Performance and UX in Next.js",
+      "url": "https://aurorascharff.no/posts/experimenting-with-rsc-for-performance-and-ux-in-nextjs/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "How to find a Next.js memory leak in production",
+      "url": "https://xabierlameiro.com/blog/nextjs/nextjs-memory-leak-in-production",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "The state of zero-runtime CSS-in-JS, mid-2026",
+      "url": "https://dx-styles.dev/blog/state-of-zero-runtime-css-in-js/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "How to Think in Remix UI Instead of React",
+      "url": "https://sergiodxa.com/tutorials/think-in-remix-ui-instead-of-react",
+      "summary": "",
+      "tags": [
+        "@remix-run/react"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "The Absolute State of Management",
+      "url": "https://infrequently.org/2026/07/state-management/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Canvas UI - Creative components based on WebGPU and HTML-in-canvas",
+      "url": "https://canvasui.dev/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "TanStack Table v9 beta.58 - Support Cell Selection and Keyboard Navigation",
+      "url": "https://tanstack.com/table/beta/docs/framework/react/guide/cell-selection",
+      "summary": "",
+      "tags": [
+        "@tanstack/react-query"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Router 8.3 - RSC Entry Updates",
+      "url": "https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v830",
+      "summary": "",
+      "tags": [
+        "react-router"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Reassure 1.6 - Performance testing for React and React Native - Stability measures",
+      "url": "https://github.com/callstack/reassure/releases/tag/reassure%401.6.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Astryx 0.1.8 & 0.1.9",
+      "url": "https://github.com/facebook/astryx/releases#release-v0.1.9",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "PostHog - The do's and don'ts of minimum viable product marketing",
+      "url": "https://go.posthog.com/twir-jul29",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💬",
+      "title": "React Native RFC - CSS calc() in React Native",
+      "url": "https://github.com/react-native-community/discussions-and-proposals/pull/1014",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "👀",
+      "title": "React Native PR - Add SafeAreaProvider, safe-area hooks, and SafeAreaView edges/mode",
+      "url": "https://github.com/react/react-native/pull/57500",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "👀",
+      "title": "RN Screens 5.0 Alpha - Rewritten Stack implementation, Android based on Material Design 3",
+      "url": "https://github.com/software-mansion/react-native-screens/releases/tag/5.0.0-alpha.1",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "👀",
+      "title": "React Native PR - backgroundImage stable in RN 0.87",
+      "url": "https://github.com/react/react-native-website/pull/5191",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "👀",
+      "title": "React Navigation PR - v8 will work on Web without React Native Web",
+      "url": "https://github.com/react-navigation/react-navigation/pull/13195",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📖",
+      "title": "React Navigation 8 - New docs on Suspense and pending UI",
+      "url": "https://reactnavigation.org/docs/8.x/suspense/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "From Expo Router to Detour: Deferred deep linking the right way",
+      "url": "https://expo.dev/blog/deferred-deep-linking-the-right-way",
+      "summary": "",
+      "tags": [
+        "expo-router"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Marc Rousavy just wanted to build react-native libraries but ended up fixing bugs in Apple/Swift compiler...",
+      "url": "https://x.com/mrousavy/status/2080675696335077457",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Install dev and production side by side with app variants",
+      "url": "https://expo.dev/blog/app-variants-side-by-side",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Why We Did Not Move MMKV Writes to a Worklet: The Serialization Cost",
+      "url": "https://andrei-calazans.com/posts/2026-07-28-mmkv-writes-worklet-serialization-cost/",
+      "summary": "",
+      "tags": [
+        "react-native-mmkv"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "ConfigCat - Release React Native Features with Feature Flags, Without Redeploying",
+      "url": "https://configcat.com/blog/using-feature-flags-in-react-native/?utm_source=thisweekinreact_newsletter&utm_medium=sponsor&utm_campaign=reactnative_202607",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "RN Workers 1.0 Alpha",
+      "url": "https://ammarahm-ed.github.io/react-native-workers/blog/introducing-react-native-workers/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "React Native WebGPU 0.7 - importDevice()",
+      "url": "https://wcandillon.github.io/react-native-webgpu/docs/integrations/react-native-skia",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Skia 2.10 - Migrates from HostObject to JSI NativeState, requires Reanimated v4",
+      "url": "https://github.com/Shopify/react-native-skia/releases/tag/v2.10.0",
+      "summary": "",
+      "tags": [
+        "@shopify/react-native-skia"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "VisionCamera 5.2 - New SkiaCamera controls (zoom, exposure, torch), stretch GPU Resizer mode",
+      "url": "https://github.com/mrousavy/react-native-vision-camera/releases/tag/v5.2.0",
+      "summary": "",
+      "tags": [
+        "react-native-vision-camera"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro 0.36.2 & 0.36.3 - Faster Record<K,V> conversion, RN 0.87 support, drops @FastNative from Sync callbacks",
+      "url": "https://github.com/mrousavy/nitro/releases#release-v0.36.3",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Expo Open OTA 3.0 - Self-hosted Expo Updates server with multi-app, rollouts, A/B testing",
+      "url": "https://www.mercuretechnologies.com/blog/expo-open-ota-v3",
+      "summary": "",
+      "tags": [
+        "expo-updates"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Argent 0.17 - Screen recording tools, pinch gesture, Windows support for Android and Chromium",
+      "url": "https://github.com/software-mansion/argent/releases/tag/v0.17.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Canvas Kit - A batteries-included 2D canvas framework built on RN Skia",
+      "url": "https://github.com/adithyavis/react-native-canvas-kit",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "React Native Social Auth - Sign in with Google for Android, iOS, Expo",
+      "url": "https://thoughtbot.com/blog/sign-in-with-google-for-react-native",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Memory Footprint - Measure React Native app's memory footprint on iOS and Android",
+      "url": "https://github.com/mdjastrzebski/react-native-memory-footprint",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Maestro 2.7 - MCP tool to debug Cloud runs with your AI agent, per-flow debug artifacts",
+      "url": "https://maestro.dev/blog/maestro-cli-2-7-0",
+      "summary": "",
+      "tags": [
+        "maestro"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Radon 1.18 - Send props, styles, state & errors from element inspector to AI chat context",
+      "url": "https://github.com/software-mansion/radon-ide/releases/tag/v1.18.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Agent Device 0.20.1 - Vega OS support, broader physical iOS support, secret-safe replay and recording improvements",
+      "url": "https://github.com/callstack/agent-device/releases/tag/v0.20.1",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Screen Transitions 3.9 - Teleport-powered handoff and escapeClipping, simplified Boundary API, navigation zoom",
+      "url": "https://screen-transitions.esjr.org/changelog/updating-to-3-9",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Sentry 8.20 - iOS screenshot regression fix, Gradle Configuration Cache compatibility",
+      "url": "https://github.com/getsentry/sentry-react-native/releases/tag/8.20.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro Fetch 1.5.3 - 3x faster streaming via shared URLSession",
+      "url": "https://github.com/margelo/react-native-nitro-fetch/releases/tag/v1.5.3",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🤖",
+      "title": "Maestro CLI 2.7 - MCP for AI Coding Agents",
+      "url": "https://maestro.dev/blog/maestro-mcp-for-ai-coding-agents",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🎙️",
+      "title": "RNR 368 - RNR Explains: Fabric",
+      "url": "https://infinite.red/react-native-radio/rnr-368-rnr-explains-fabric",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "🦋",
+      "title": "TC39 advanced Promise.allKeyed, Error.code, Map.take, RegExp Linear Matching, and more",
+      "url": "https://bsky.app/profile/tc39.es/post/3mrdjr6uq2t2i",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📣",
+      "title": "Core Web Vitals - Measuring soft navigations",
+      "url": "https://developer.chrome.com/docs/web-platform/soft-navigations",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📣",
+      "title": "GitHub - npm publish-time malware scanning and dual-use metadata",
+      "url": "https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📊",
+      "title": "State of CSS - Survey results",
+      "url": "https://2026.stateofcss.com/en-US",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "ECMAScript Deferred Module Evaluation with import defer",
+      "url": "https://nitayneeman.com/blog/introducing-import-defer-in-ecmascript/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "Your SPA Is Leaking Memory. Soak Test It",
+      "url": "https://denodell.com/blog/your-spa-is-leaking-memory-soak-test-it",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Playwright 1.62 - New component testing model, AbortSignal, WebP screenshots, isolated retries",
+      "url": "https://github.com/microsoft/playwright/releases/tag/v1.62.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Webpack 5.109 - Built-in CSS, HTML, TypeScript support enabled by default, Vite-compatible import.meta APIs, asset query suffixes",
+      "url": "https://webpack.js.org/blog/2026-07-24-webpack-5-109/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Firefox 153 - Picture-in-Picture, import as text, popover=\"hint\"",
+      "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/153",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    }
+  ]
+}
