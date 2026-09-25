@@ -1,0 +1,662 @@
+{
+  "schemaVersion": 2,
+  "parsedAt": "2026-09-25T12:35:03.019Z",
+  "model": "gpt-4o",
+  "issueNumber": 298,
+  "title": "This Week In React #298: Astro, Redux, img, Hotkeys, R3F, Next.js, AI, Redact | Reanimated, Worklets, Helix, Screens, SecondaryRuntime, Arrangement View, View Shot | TC39, Node, pnpm, Turborepo, jsdom, responsive iframes",
+  "url": "https://thisweekinreact.com/newsletter/298",
+  "pubDate": "Wed, 23 Sep 2026 00:00:00 GMT",
+  "intro": "Hi everyone, Seb and Jan here 👋!\nThis week is rather quiet on the web side. Astro's React integration keeps ramping up. Redux is working on significant performance improvements for large apps.\nOn mobile, we still have a steady flow of interesting releases. Reanimated enabled its new layout engine by default. Shopify presented Helix, its internal tool to move away from RN. Xcode project format is finally moving to JSON!\nWe asked on 𝕏: do average devs still care about React? Thanks to everyone who answered our existential question! If fewer devs care about implementation details and React, wha",
+  "items": [
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "🦋",
+      "title": "Bluesky",
+      "url": "https://slo.im/last/b",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "✖️",
+      "title": "X / Twitter",
+      "url": "https://slo.im/last/x",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👔",
+      "title": "LinkedIn",
+      "url": "https://slo.im/last/l",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👽",
+      "title": "Reddit",
+      "url": "https://slo.im/last/r",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "React docs - New <img> API ref page",
+      "url": "https://react.dev/reference/react-dom/components/img",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "👀",
+      "title": "React Flight PR - Server References for arbitrary object types",
+      "url": "https://github.com/react/react/pull/37636",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🔐",
+      "title": "Next.js 16.3.6 - Security Update",
+      "url": "https://nextjs.org/blog/nextjs-security-update-september-22-2026",
+      "summary": "",
+      "tags": [
+        "next"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🗓️",
+      "title": "React Advanced London",
+      "url": "https://reactadvanced.com/?utm_source=thisweekinreact",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Do Frameworks Matter Anymore?",
+      "url": "https://brookslybrand.com/posts/do-frameworks-matter-anymore/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "React Activity: When A Render No Longer Guarantees an Effect",
+      "url": "https://hackernoon.com/react-activity-when-a-render-no-longer-guarantees-an-effect",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Frontend for systems engineers",
+      "url": "https://tj-zhang.com/blog/frontend-for-systems-engineers/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Astro React 7.0 - Replaces Babel with Oxc, upgrades to Vite Plugin React v6",
+      "url": "https://docs.astro.build/en/guides/integrations-guide/react/#upgrading-the-react-integration-to-v700",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Redux 9.4 alpha - useSignalSelector() hook, <SignalProvider> component, react-redux/signals entrypoint",
+      "url": "https://github.com/reduxjs/react-redux/releases/tag/v9.4.0-alpha.0",
+      "summary": "",
+      "tags": [
+        "@reduxjs/toolkit"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Redact 0.1 - Add React 19.3 APIs, improve runtime compatibility, keep sync rendering contract",
+      "url": "http://releases/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Three Fiber 9.8 - Support for React 19.3, roots configured synchronously, Strict Mode fixed",
+      "url": "https://github.com/pmndrs/react-three-fiber/releases/tag/v9.8.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "TanStack React Hotkeys 0.11 - Improved physical key support, recorder validation, conflict detection, cross-layout fixes",
+      "url": "https://github.com/TanStack/hotkeys/releases/tag/%40tanstack%2Freact-hotkeys%400.11.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Simple Maps 5.0 - Composable SVG map charts for data visualization in React",
+      "url": "https://www.react-simple-maps.io/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Resizable Panels 4.13 - Deferred panel resizing, panel expand/collapse threshold",
+      "url": "https://bsky.app/profile/bvaughn.me/post/3mvxpohs3vs2n",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "react-zoom-pan-pinch 4.2 - Zooming, panning, pinching images and html elements, the easy way",
+      "url": "https://github.com/BetterTyped/react-zoom-pan-pinch/releases/tag/v4.2.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "build mode - How much can you delegate to agents?",
+      "url": "https://go.posthog.com/twir-sept23",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "👀",
+      "title": "React Native RFC - Secondary JavaScript runtimes in React Native",
+      "url": "https://github.com/react-native-community/discussions-and-proposals/pull/1023",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Shopify Helix - The internal tool powering our native migration",
+      "url": "https://shopify.engineering/helix",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Deep Dive into ReactLynx: From Background Rendering to Instant First-Frame Rendering",
+      "url": "https://lynxjs.org/next/blog/reactlynx-instant-first-frame-rendering",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "The KMP-on-iOS Scaling Problem That Rust UniFFI Fixes",
+      "url": "https://andrei-calazans.com/posts/2026-09-19-the-kmp-ios-scaling-problem-rust-uniffi-fixes/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "React Native in an Industry That's Changing",
+      "url": "https://x.com/ryanlanciaux/status/2098434962915573971",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "What Does Shared Business Logic in Rust Look Like on iOS & Android?",
+      "url": "https://andrei-calazans.com/posts/2026-09-18-shared-business-logic-in-rust/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Exploring Jev for AI-Driven QA with agent-device",
+      "url": "https://www.callstack.com/blog/exploring-jev-for-mobile-qa-with-agent-device",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "Codemagic Patch - Self-hosted OTA updates, complete with fingerprinting, release metrics and online dashboard",
+      "url": "https://patch.codemagic.io/?utm_source=newsletter&utm_medium=referral&utm_campaign=twir",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Xcode 27.2 beta - JSON project format .xcproj",
+      "url": "https://developer.apple.com/documentation/xcode/updating-your-xcode-project-configuration-file-format",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Reanimated 4.7 - New layout animations engine by default, animated backgroundImage, more Android CSS transitions",
+      "url": "https://swmansion.com/changelog/reanimated-4-7-0/",
+      "summary": "",
+      "tags": [
+        "react-native-reanimated"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Worklets 0.13 - Networking module for Bundle Mode runtimes, OXC Babel plugin port, SPM support",
+      "url": "https://swmansion.com/changelog/worklets-0-13-0/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Screens 5.0 alpha 3 - Stack v5 header customization on Android and iOS, FormSheet stacking, SPM support",
+      "url": "https://swmansion.com/changelog/react-native-screens-5-0-0-alpha-3/",
+      "summary": "",
+      "tags": [
+        "react-native-screens"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Expo Infinite Media - Native paged media feed, AVFoundation on iOS, Media3 on Android",
+      "url": "https://github.com/rbayuokt/expo-infinite-media",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Numeric Text - SwiftUI's numericText on iOS, frame-measured native renderer on Android",
+      "url": "https://github.com/AmatoGiulio/react-native-numeric-text",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Secure Webview - Explicit origin allowlists. Native navigation enforcement. Blocked redirects. Deep-link protection. Fail-closed by default.",
+      "url": "https://github.com/adnxy/react-native-secure-webview",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Screen Choreography 0.6 - Declarative Enter/Exit reveals, duration-based springs, interactive gesture lifecycle",
+      "url": "https://github.com/DorianMazur/react-native-screen-choreography/releases/tag/v0.6.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "View Shot 6.0 - RN 0.80+ required, 0.87 Strict TypeScript API support, html2canvas-pro optional on web",
+      "url": "https://github.com/gre/react-native-view-shot/releases/tag/v6.0.0",
+      "summary": "",
+      "tags": [
+        "react-native-view-shot"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro SQLite 9.8 - iOS Application Support storage, performance mode, thread safety",
+      "url": "https://github.com/margelo/react-native-nitro-sqlite/releases/tag/v9.8.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Sentry 8.27 - Session Replay runtime controls, per-class masking, iOS hang workaround",
+      "url": "https://github.com/getsentry/sentry-react-native/releases/tag/8.27.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Test Renderer 1.3 - React 19.3 support",
+      "url": "https://github.com/mdjastrzebski/test-renderer/releases/tag/v1.3.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Legend List 3.4 - Scroll readiness callback, end-following fixes, direction-aware row preparation",
+      "url": "https://github.com/LegendApp/legend-list/releases/tag/v3.4.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Arrangement View 0.1 - Adaptive split/overlay panes and hinge observation for foldables, early iPhone Duo support, Android coming soon",
+      "url": "https://github.com/thiagobrez/react-native-arrangement-view",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Skia Layout - Flexbox layouts for React Native Skia powered by Yoga",
+      "url": "https://github.com/ifeoluwak/react-native-skia-layout",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Pulsar Studio - Visual editor for custom haptic patterns, timeline design, audio and Lottie generation",
+      "url": "https://pulsar.swmansion.com/studio",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Enriched Markdown iOS 0.3 - LaTeX math, spoilers, highlights, GitHub alerts, better VoiceOver",
+      "url": "https://github.com/software-mansion/enriched-markdown/blob/main/packages/enriched-markdown-ios/README.md",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Agent Device 0.21.12 - Foldable simulator posing, recording contact sheets, Maestro permissions",
+      "url": "https://github.com/callstack/agent-device/releases/tag/v0.21.12",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Delacour UI - shadcn-style component kit for RN: Uniwind styling, Reanimated interaction, Pulsar haptics",
+      "url": "https://github.com/delacournz/delacour-ui",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "🤖",
+      "title": "Apex - Callstack's React Native coding model",
+      "url": "https://apex.callstack.com/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "👀",
+      "title": "TC39 - Agenda for the 116th meeting",
+      "url": "https://github.com/tc39/agendas/blob/main/2026/09.md",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Chrome 154 - Responsive iframe resizing",
+      "url": "https://www.bram.us/2026/09/23/responsive-iframes/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Edge 151-153",
+      "url": "https://blogs.windows.com/msedgedev/2026/09/21/new-in-edge-for-developers-create-better-components-and-make-your-site-agent-ready/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "pnpm 12.6 - Automatic dedupe, automatic type installation, file:/link catalogs, and more",
+      "url": "https://pnpm.io/blog/releases/12.6",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Turborepo 2.11 - Native support for Rust/Python/Go, faster startup, nub/aube support",
+      "url": "https://turborepo.dev/blog/2-11",
+      "summary": "",
+      "tags": [
+        "turbo"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Node.js 26.9- & 26.10 - Web Workers support, VFS improvements, enable ffi, add bench, debounce/throttle",
+      "url": "https://nodejs.org/en/blog",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "jsdom 30.1 - Major performance, memory, and correctness improvements",
+      "url": "https://github.com/jsdom/jsdom/releases/tag/v30.1.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Rstest 0.12 - Playwright E2E testing, Module Federation testing, faster jsdom tests, new JS API",
+      "url": "https://rstest.rs/blog/announcing-0-12",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "tRPC 11.19 - Better request cancellation, TanStack Query skipToken fix",
+      "url": "https://github.com/trpc/trpc/releases/tag/v11.19.0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "ESLint 10.11 - Perf improvements: 20-25% faster initialization, faster rule execution",
+      "url": "https://eslint.org/blog/2026/09/eslint-v10.11.0-released/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    }
+  ]
+}
