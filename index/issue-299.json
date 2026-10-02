@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 2,
+  "parsedAt": "2026-10-02T13:36:23.628Z",
+  "model": "gpt-4o",
+  "issueNumber": 299,
+  "title": "This Week In React #299: Panda, Vinext, Next.js, Preact, Design Systems, RTK | Variable font, Activity Result, Lynx, Lucent, macOS, Plain Text, Navigation, Angular Native, Re.Pack | TC39, Composites, WebSkills, MSW, upm, pnpm",
+  "url": "https://thisweekinreact.com/newsletter/299",
+  "pubDate": "Wed, 30 Sep 2026 00:00:00 GMT",
+  "intro": "Hi everyone, Seb and Jan here 👋!\nThis week we have 2 major releases in the React ecosystem: Panda CSS v2 and Vinext v1.\nOn the mobile side, RN is getting support for variable font and Android Activity Result. Lynx v4 is out. Lucent is a new way to write native modules.\nI’m particularly excited about the TC39 meeting happening right now. Many proposals progressed, including my favorite one: Composites moved to stage 2!\nLet's dive in!\nAs always, thanks for supporting us on your favorite platform:",
+  "items": [
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "🦋",
+      "title": "Bluesky",
+      "url": "https://slo.im/last/b",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "✖️",
+      "title": "X / Twitter",
+      "url": "https://slo.im/last/x",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👔",
+      "title": "LinkedIn",
+      "url": "https://slo.im/last/l",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "Intro",
+      "sectionEmoji": "",
+      "itemEmoji": "👽",
+      "title": "Reddit",
+      "url": "https://slo.im/last/r",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "⭐",
+      "title": "Panda CSS 2.0 - Same styling API, a new engine underneath",
+      "url": "https://panda-css.com/blog/panda-css-v2",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "",
+      "title": "The styling runtime disappears from your bundle",
+      "url": "https://panda-css.com/blog/zero-runtime-all-the-way-down",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "",
+      "title": "typography preset",
+      "url": "https://panda-css.com/blog/typography-preset",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "💸",
+      "title": "PostHog - I wrote a 70x faster SQL parser while barely looking at the code",
+      "url": "https://go.posthog.com/twir-sept30",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🔐",
+      "title": "Next.js September Security - 16.3.8 and 15.5.27",
+      "url": "https://nextjs.org/blog/september-2026-security-release",
+      "summary": "",
+      "tags": [
+        "next"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "🗓️",
+      "title": "React Summit US",
+      "url": "https://reactsummit.us/?utm_source=thisweekinreact",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "GitHub - Improving site performance by shipping more CSS",
+      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Rebuilding React Router's Global Hooks in Next.js",
+      "url": "https://aurorascharff.no/posts/rebuilding-react-routers-global-hooks-in-nextjs/",
+      "summary": "",
+      "tags": [
+        "react-router",
+        "next"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "Props Are Not a Design System",
+      "url": "https://vitonsky.net/blog/2026/09/18/design-system/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "How we made claude.ai 3x faster in two weeks",
+      "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "AI, Open Source, and the Long Road to TanStack Charts",
+      "url": "https://tannerlinsley.com/posts/ai-open-source-and-the-long-road-to-tanstack-charts",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📜",
+      "title": "How to Sync a Design System with Claude Design",
+      "url": "https://nitayneeman.com/blog/how-to-sync-a-design-system-with-claude-design/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Preact 11.0 - ESM-only, TS 5.1+, Hydration 2.0 with streaming SSR, refs as props, Object.is hook deps, React compat improvements",
+      "url": "https://preactjs.com/blog/preact-11/",
+      "summary": "",
+      "tags": [
+        "preact"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "React Resizable Panels 4.14 - Grid layout components",
+      "url": "https://react-resizable-panels.vercel.app/examples/grid-basics",
+      "summary": "",
+      "tags": [
+        "react-resizable-panels"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Redux Toolkit 2.13 - TypeScript 7 support, long list of bug fixes, new unified docs site",
+      "url": "https://github.com/reduxjs/redux-toolkit/releases/tag/v2.13.0",
+      "summary": "",
+      "tags": [
+        "@reduxjs/toolkit"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "⚛️ React​",
+      "sectionEmoji": "⚛️",
+      "itemEmoji": "📦",
+      "title": "Oxlint 1.86 - only-export-components now supports compound component, 2 React Compiler fixes",
+      "url": "https://github.com/oxc-project/oxc/releases/tag/oxlint_v1.86.0",
+      "summary": "",
+      "tags": [
+        "oxlint"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "DeployPulse - Hosted OTA updates for React Native. A drop-in replacement for CodePush and EAS Update.",
+      "url": "https://deploypulse.io/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📖",
+      "title": "React Native docs - fontVariationSettings - Variable font support",
+      "url": "https://reactnative.dev/docs/next/text-style-props#fontvariationsettings",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "React Native Modules Cannot Use Android's Activity Result API",
+      "url": "https://www.matinzd.dev/blog/activity-result-api-for-react-native-modules/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Shipping super-calendar",
+      "url": "https://afonsojramos.me/blog/super-calendar/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "5 react-native-enriched-html Use Cases You Might Not Know About",
+      "url": "https://swmansion.com/blog/5-react-native-enriched-html-use-cases-you-might-not-know-about/",
+      "summary": "",
+      "tags": [
+        "react-native-enriched-html"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📜",
+      "title": "Agentic CI for Expo apps with TesterArmy",
+      "url": "https://expo.dev/blog/agentic-ci-for-expo-apps-with-testerarmy",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "💸",
+      "title": "Maestro MCP - A practical guide to mobile UI testing with coding agents",
+      "url": "https://maestro.dev/blog/mobile-ui-testing-with-coding-agents?utm_source=this-week-in-react",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "React Navigation 7.23 - Add tabBarRepeatedPressBehavior",
+      "url": "https://github.com/react-navigation/react-navigation/releases/tag/%40react-navigation%2Fcore%407.23.0",
+      "summary": "",
+      "tags": [
+        "@react-navigation/native"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Lynx 4.0 - Foldables, Media Queries, Liquid Glass & Blur, WebView, ReactLynx improvements, Generative UI",
+      "url": "https://lynxjs.org/next/blog/lynx-4-0",
+      "summary": "",
+      "tags": [
+        "lynx"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Lucent - Write native modules in TypeScript, compiled to C++ and called through JSI",
+      "url": "https://github.com/Fausto95/lucent",
+      "summary": "",
+      "tags": [
+        "lucent"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "React Native macO 0.83",
+      "url": "https://github.com/microsoft/react-native-macos/releases/tag/react-native-macos%400.83.0",
+      "summary": "",
+      "tags": [
+        "react-native-macos"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Appduct - Expose app tools to agents and tests, no debug menus in the binary",
+      "url": "https://github.com/callstackincubator/appduct",
+      "summary": "",
+      "tags": [
+        "appduct"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro SQLite 10 - Independent database handles, reusable prepared statements, macOS support",
+      "url": "https://github.com/margelo/react-native-nitro-sqlite/releases/tag/v10.0.0",
+      "summary": "",
+      "tags": [
+        "react-native-nitro-sqlite"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Legend List 3.6 - Add viewPositionFallback for oversized list items",
+      "url": "https://github.com/LegendApp/legend-list/releases/tag/v3.6.0",
+      "summary": "",
+      "tags": [
+        "legend-list"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Angular Native - Build native iOS and Android apps with Angular, built and shipped with Expo",
+      "url": "https://github.com/ng-native/ng-native",
+      "summary": "",
+      "tags": [
+        "angular-native"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Nitro RTMP - Live streaming as a VisionCamera 5 output",
+      "url": "https://github.com/bhyoo99/react-native-nitro-rtmp",
+      "summary": "",
+      "tags": [
+        "react-native-nitro-rtmp"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Plain Text 0.9 - Faster, drop-in remplacement for Text component, proper hyphenation, writingDirection",
+      "url": "https://github.com/mdjastrzebski/react-native-plain-text/releases/tag/v0.9.0",
+      "summary": "",
+      "tags": [
+        "react-native-plain-text"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Re.Pack 5.4 - Lazy per-platform Rspack builds, unified commands entry point, RN 0.87 support",
+      "url": "https://github.com/callstack/repack/releases/tag/%40callstack/repack%405.4.0",
+      "summary": "",
+      "tags": [
+        "repack"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "ViroReact 3.0 - visionOS, Web AR, co-location multiplayer, Studio and MCP tooling",
+      "url": "https://www.reactvision.xyz/updates/viroreact-3-0-0-five-platforms-one-codebase/",
+      "summary": "",
+      "tags": [
+        "viroreact"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Skia 2.13 - Legacy architecture support removed, android.surfaceType to select the backing view, SPM support",
+      "url": "https://github.com/Shopify/react-native-skia/releases/tag/v2.13.0",
+      "summary": "",
+      "tags": [
+        "@shopify/react-native-skia"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Sentry 8.28 - Native breadcrumb off-switches, PII accessibility identifier opt-out, MetricKit raw payloads",
+      "url": "https://github.com/getsentry/sentry-react-native/releases/tag/8.28.0",
+      "summary": "",
+      "tags": [
+        "sentry-react-native"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Legend List 3.5 - scrollElement to share an ancestor scrollbar on web, less layout work for single-column lists",
+      "url": "https://github.com/LegendApp/legend-list/releases/tag/v3.5.0",
+      "summary": "",
+      "tags": [
+        "legend-list"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Argent 0.26 - iPhone Duo simulator support, clearer simulator-server exit errors, Xcode Device Hub for booted simulators",
+      "url": "https://github.com/software-mansion/argent/releases/tag/v0.26.0",
+      "summary": "",
+      "tags": [
+        "argent"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "📱 React-Native​",
+      "sectionEmoji": "📱",
+      "itemEmoji": "📦",
+      "title": "Agent Device 0.21.15 - iOS 27 SDK and Xcode 27 support, visionOS simulators, richer Android accessibility snapshots",
+      "url": "https://github.com/callstack/agent-device/releases/tag/v0.21.15",
+      "summary": "",
+      "tags": [
+        "agent-device"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "🐦",
+      "title": "TC39 meeting live updates - Progress for Composites, Iterator methods, export defer, and more",
+      "url": "https://x.com/search?q=from%3Arobpalmer2%20ECMAScript%20excitement&src=typed_query&f=live",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "👀",
+      "title": "WebSkills",
+      "url": "https://github.com/kevinmoch/web-skill",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "Optimizing objects with null prototypes",
+      "url": "https://adventures.nodeland.dev/archive/optimizing-objects-with-null-prototypes/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "CSS linked parameters - One SVG, nine posters",
+      "url": "https://pepelsbey.dev/articles/svg-link-params/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📜",
+      "title": "Electron to PWA: There and Back Again",
+      "url": "https://kettanaito.com/blog/electron-to-pwa-and-back-again",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Vite+ 1.0 - A single vp command to manage your Node.js runtime, package manager, and frontend toolchain",
+      "url": "https://voidzero.dev/posts/announcing-vite-plus-1-0",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "upm - A fast, tiny package manager for the npm registry",
+      "url": "https://upm.sh/",
+      "summary": "",
+      "tags": [],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "Mock Service Worker 3.0 - Smaller, ESM-only, granular entrypoints, GraphQL subscriptions, Network API, socket-level Node.js interception",
+      "url": "https://mswjs.io/blog/introducing-msw-3.0",
+      "summary": "",
+      "tags": [
+        "msw"
+      ],
+      "related": [],
+      "audience": []
+    },
+    {
+      "section": "🔀 Other​",
+      "sectionEmoji": "🔀",
+      "itemEmoji": "📦",
+      "title": "pnpm 12.7 - node shim follows .nvmrc, install --allow-build flag, wait for published packages to become available",
+      "url": "https://pnpm.io/blog/releases/12.7",
+      "summary": "",
+      "tags": [
+        "pnpm"
+      ],
+      "related": [],
+      "audience": []
+    }
+  ]
+}
